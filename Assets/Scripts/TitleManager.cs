@@ -6,7 +6,7 @@ using TMPro;
 public class TitleManager : MonoBehaviour
 {
     public int titleInFr, titleOutFr;
-    public float titleCounter , trainRepeatPos;
+    public float titleCounter ,trainStartPos,trainEndPos ; //trainRepeatPos
     public GameObject title , trainPrefab;
     public TextMeshProUGUI counter;
 
@@ -34,10 +34,11 @@ public class TitleManager : MonoBehaviour
         }*/
 
         //—ñŽÔ‚Ìƒ‹[ƒv
-        if(trains.transform.position.x > trainRepeatPos)
+        if(trains.transform.position.x > trainEndPos)
         {
-            Destroy(trains.gameObject);
-            TrainSpawn();
+            //Destroy(trains.gameObject);
+            //TrainSpawn();
+            trains.transform.position = new Vector3(trainStartPos, trains.transform.position.y, trains.transform.position.z);
         }
 
     }
@@ -62,6 +63,6 @@ public class TitleManager : MonoBehaviour
     /// </summary>
     public void TrainSpawn()
     {
-        trains = Instantiate(trainPrefab, new Vector3(-80f, 1f, 0f), Quaternion.identity);
+        trains = Instantiate(trainPrefab, new Vector3(trainStartPos, 1f, 0f), Quaternion.identity);
     }
 }

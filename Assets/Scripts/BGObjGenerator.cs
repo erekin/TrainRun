@@ -11,12 +11,6 @@ public class BGObjGenerator : MonoBehaviour
     {
         GroundCreate();
     }
-
-    void Update()
-    {
-
-    }
-
     public void GroundCreate()
     {
         GameObject childObject = Instantiate(createPrefab, new Vector3(cleatePosX, cleatePosY, cleatePosZ), Quaternion.identity) as GameObject;

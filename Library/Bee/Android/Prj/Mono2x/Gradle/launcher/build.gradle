@@ -5,7 +5,7 @@ dependencies {
     }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion '30.0.2'
 
     compileOptions {
@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         minSdkVersion 22
-        targetSdkVersion 29
+        targetSdkVersion 30
         applicationId 'com.DefaultCompany.TRAINRUN_Test'
         ndk {
             abiFilters 'armeabi-v7a'

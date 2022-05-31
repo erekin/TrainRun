@@ -555,7 +555,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 3daf4bd69897e29c8dd8c9059d3acfdf
+      Hash: 6693cdc42f711cd836615214cec36f64
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TitleManager
@@ -712,4 +712,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MoveTest.unity
-  playerPath: C:/Users/maezaki/Unity/TrainRun/TRAINRUN.apk
+  playerPath: E:/Unity/TRAINRUN/TRAINRUN.apk

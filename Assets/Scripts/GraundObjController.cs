@@ -12,7 +12,6 @@ public class GraundObjController : MonoBehaviour
     void Start()
     {
         groundObj = GameObject.FindGameObjectWithTag("Ground");
-        //groundSet = groundObj.GetComponent<GroundSet>();
         bgObjGenerator = groundObj.GetComponent<BGObjGenerator>();
     }
 
@@ -21,7 +20,6 @@ public class GraundObjController : MonoBehaviour
         transform.position += new Vector3(-groundObjSpeed * Time.deltaTime, 0f, 0f);
         if (this.transform.position.x < -12.0f)
         {
-            //groundSet.GroundCreate();
             bgObjGenerator.GroundCreate();
             GroundObjBreak();
         }
