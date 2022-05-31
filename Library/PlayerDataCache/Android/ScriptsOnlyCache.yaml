@@ -12,7 +12,6 @@ ScriptsOnlyBuild:
     Unity.ProBuilder.Editor.dll:
     - UnityEditor.ProBuilder.ProBuilderEditor
     Unity.ProBuilder.dll:
-    - UnityEngine.ProBuilder.PolyShape
     - UnityEngine.ProBuilder.ProBuilderMesh
     - UnityEngine.ProBuilder.Shapes.ProBuilderShape
     Unity.Rider.Editor.dll:
@@ -38,7 +37,6 @@ ScriptsOnlyBuild:
     - UnityEngine.ProBuilder.Face
     - UnityEngine.ProBuilder.Shapes.Cone
     - UnityEngine.ProBuilder.Shapes.Cube
-    - UnityEngine.ProBuilder.Shapes.Cylinder
     - UnityEngine.ProBuilder.SharedVertex
     - UnityEngine.ProBuilder.UnwrapParameters
     Unity.TextMeshPro:
@@ -95,8 +93,6 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
