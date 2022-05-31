@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22814
+  m_Name: pb_Mesh22140
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1585,8 +1585,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: THE TRAIN RUNNER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 65836ae1205e81240b700245912780ba, type: 2}
-  m_sharedMaterial: {fileID: -1416760651995431661, guid: 65836ae1205e81240b700245912780ba, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7652eba87a21dfa4d8b8343ba362eaae, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &593644324
@@ -3278,8 +3278,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 65836ae1205e81240b700245912780ba, type: 2}
-  m_sharedMaterial: {fileID: -1416760651995431661, guid: 65836ae1205e81240b700245912780ba, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7652eba87a21dfa4d8b8343ba362eaae, type: 2}
+  m_sharedMaterial: {fileID: 7247313818484614716, guid: 7652eba87a21dfa4d8b8343ba362eaae, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
