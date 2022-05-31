@@ -16,7 +16,7 @@ public class MountController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Exit")
+        if(other.gameObject.CompareTag("Exit"))
         {
             transform.position = new Vector3(25f, transform.position.y, transform.position.z);
         }

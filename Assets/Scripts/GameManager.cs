@@ -11,7 +11,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     }    
     void Update()
     {
-        //counter = Time.frameCount;
         counter = Time.time;
     }
 }
