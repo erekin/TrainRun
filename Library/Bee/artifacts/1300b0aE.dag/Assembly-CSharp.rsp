@@ -345,10 +345,11 @@
 "Assets/Scripts/BGObjGenerator.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GraundObjController.cs"
+"Assets/Scripts/MainManager.cs"
 "Assets/Scripts/MountController.cs"
 "Assets/Scripts/RailController.cs"
 "Assets/Scripts/SingletonMonoBehaviour.cs"
-"Assets/Scripts/TitleManager.cs"
+"Assets/Scripts/Title/TitleManager.cs"
 "Assets/Scripts/TrainController.cs"
 "Assets/Scripts/TreesController.cs"
 -langversion:9.0
