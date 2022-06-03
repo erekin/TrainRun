@@ -7,7 +7,7 @@ public class TitleManager : MonoBehaviour
 {
     public int titleInFr, titleOutFr;
     public float titleCounter ,trainStartPos,trainEndPos ; //trainRepeatPos
-    public GameObject title , trainPrefab;
+    public GameObject title ,startButton, trainPrefab;
     public TextMeshProUGUI counter;
 
     GameObject trains;
@@ -36,8 +36,6 @@ public class TitleManager : MonoBehaviour
         //列車のループ
         if(trains.transform.position.x > trainEndPos)
         {
-            //Destroy(trains.gameObject);
-            //TrainSpawn();
             trains.transform.position = new Vector3(trainStartPos, trains.transform.position.y, trains.transform.position.z);
         }
 
@@ -49,6 +47,7 @@ public class TitleManager : MonoBehaviour
     public void TitleInsert(GameObject title)
     {
         title.SetActive(true);
+        startButton.SetActive(true);
     }
     /// <summary>
     /// 表示状態のタイトルを非表示にする（現在使用していません）
