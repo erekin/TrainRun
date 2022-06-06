@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Exit
   - TreeSet
+  - MainManager
   layers:
   - Default
   - TransparentFX

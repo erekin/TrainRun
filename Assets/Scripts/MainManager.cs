@@ -5,9 +5,9 @@ using TMPro;
 
 public class MainManager : MonoBehaviour
 {
-    public float mainCounter ,trainStartPos,trainEndPos ; 
+    public float trainStartPos,trainStopPos ; 
     public GameObject trainPrefab;
-    public TextMeshProUGUI counter;
+    public bool trainStop;
 
     GameObject trains;
         
@@ -18,16 +18,8 @@ public class MainManager : MonoBehaviour
     }    
     void Update()
     {
-        //カウンター
-        mainCounter = GameManager.Instance.counter;    //毎回 GameManager.Instance.counterと書くの面倒なので変数に入れた
-        counter.text = mainCounter.ToString();
-
-        //列車のループ
-        if(trains.transform.position.x > trainEndPos)
-        {
-            trains.transform.position = new Vector3(trainStartPos, trains.transform.position.y, trains.transform.position.z);
-        }
-
+        //列車関連
+        TrainStop();
     }
     /// <summary>
     /// 列車を生み出す
@@ -35,5 +27,19 @@ public class MainManager : MonoBehaviour
     public void TrainSpawn()
     {
         trains = Instantiate(trainPrefab, new Vector3(trainStartPos, 1f, 0f), Quaternion.identity);
+    }
+    /// <summary>
+    /// 列車停止フラグ
+    /// </summary>
+    public void TrainStop()
+    {
+        if(trains.transform.position.x > trainStopPos)
+        {
+            trainStop = true;
+        }
+        else
+        {
+            return;
+        }
     }
 }

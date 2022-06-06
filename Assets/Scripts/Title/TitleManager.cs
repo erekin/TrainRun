@@ -29,10 +29,6 @@ public class TitleManager : MonoBehaviour
         {
             TitleInsert(title);
         }
-        /*if(titleCounter > titleOutFr)
-        {
-            TitleOut(title);
-        }*/
 
         //列車のループ
         if(trains.transform.position.x > trainEndPos)
@@ -49,14 +45,6 @@ public class TitleManager : MonoBehaviour
     {
         title.SetActive(true);
         startButton.SetActive(true);
-    }
-    /// <summary>
-    /// 表示状態のタイトルを非表示にする（現在使用していません）
-    /// </summary>
-    /// <param name="title"></param>
-    public void TitleOut(GameObject title)
-    {
-        title.SetActive(false);
     }
     /// <summary>
     /// 列車を生み出す

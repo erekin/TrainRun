@@ -66,8 +66,8 @@
     <Compile Include="Assets\Scripts\MountController.cs" />
     <Compile Include="Assets\Scripts\Title\TitleManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\TreesController.cs" />
     <Compile Include="Assets\Scripts\MainManager.cs" />
+    <Compile Include="Assets\Scripts\TreesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
