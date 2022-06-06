@@ -53,6 +53,9 @@ public class TitleManager : MonoBehaviour
     {
         trains = Instantiate(trainPrefab, new Vector3(trainStartPos, 1f, 0f), Quaternion.identity);
     }
+    /// <summary>
+    /// Startƒ{ƒ^ƒ“‰Ÿ‰ºˆ—
+    /// </summary>
     public void OnStarttButton()
     {
         SceneManager.LoadScene("Main");

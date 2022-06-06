@@ -4,22 +4,42 @@ using UnityEngine;
 
 public class TrainController : MonoBehaviour
 {
-    public float speed;
+    public float speed, trainDownSpeed,trainStopPos;
     MainManager mainManager;
     void Start()
     {
-        mainManager = GameObject.FindGameObjectWithTag("MainManager").GetComponent<MainManager>();
+        if (!GameObject.FindGameObjectWithTag("MainManager"))
+        {
+            return;
+        }
+        else
+        {
+            mainManager = GameObject.FindGameObjectWithTag("MainManager").GetComponent<MainManager>();
+        }        
     }
 
     void Update()
     {
-        if (!mainManager.trainStop)
+        //ðŒ‚É‚æ‚é—ñŽÔ‚Ì“®‚«•ªŠò
+        if (!GameManager.Instance.trainStop)     //trainStopƒtƒ‰ƒO‚ªfalse‚ÌŠÔ‚Í—ñŽÔ‚ª“®‚­
         {
-            transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
+            TrainMove(speed);
+        }
+        else if(transform.position.x > trainStopPos)
+        {
+            TrainMove(trainDownSpeed);
         }
         else
         {
             return;
         }
+    }
+    /// <summary>
+    /// —ñŽÔ“®‚­
+    /// </summary>
+    /// <param name="x"></param>
+    public void TrainMove(float x)
+    {
+        transform.position += new Vector3(x * Time.deltaTime, 0f, 0f);
     }
 }

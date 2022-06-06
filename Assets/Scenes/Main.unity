@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trainStartPos: -25
-  trainStopPos: 87
+  trainStopPos: 105
   trainPrefab: {fileID: 1818366829525411233, guid: edd01471c83b66c42a28fef6d9ec5bab, type: 3}
   trainStop: 0
 --- !u!4 &1356251878 stripped

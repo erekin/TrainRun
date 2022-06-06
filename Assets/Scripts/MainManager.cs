@@ -7,7 +7,6 @@ public class MainManager : MonoBehaviour
 {
     public float trainStartPos,trainStopPos ; 
     public GameObject trainPrefab;
-    public bool trainStop;
 
     GameObject trains;
         
@@ -35,7 +34,7 @@ public class MainManager : MonoBehaviour
     {
         if(trains.transform.position.x > trainStopPos)
         {
-            trainStop = true;
+            GameManager.Instance.trainStop = true;
         }
         else
         {
