@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrainController : MonoBehaviour
 {
-    public float speed, trainDownSpeed,trainStopPos;
+    public float speed, trainDownSpeed,train2ndStopPos;
     MainManager mainManager;
     void Start()
     {
@@ -25,7 +25,7 @@ public class TrainController : MonoBehaviour
         {
             TrainMove(speed);
         }
-        else if(transform.position.x > trainStopPos)
+        else if(transform.position.x > train2ndStopPos)
         {
             TrainMove(trainDownSpeed);
         }
