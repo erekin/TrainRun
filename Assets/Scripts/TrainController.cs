@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TrainController : MonoBehaviour
 {
-    public float speed, trainDownSpeed,train2ndStopPos;
-    MainManager mainManager;
+    public float speed, introSpeed,DownSpeed;  //,train2ndStopPos
+    TrainManager trainManager;
     void Start()
     {
         if (!GameObject.FindGameObjectWithTag("MainManager"))
@@ -14,25 +14,36 @@ public class TrainController : MonoBehaviour
         }
         else
         {
-            mainManager = GameObject.FindGameObjectWithTag("MainManager").GetComponent<MainManager>();
+            trainManager = GameObject.FindGameObjectWithTag("MainManager").GetComponent<TrainManager>();
         }        
     }
-
     void Update()
     {
         //条件による列車の動き分岐
-        if (!GameManager.Instance.trainStop)     //trainStopフラグがfalseの間は列車が動く
+        switch (trainManager.trainMode)
         {
-            TrainMove(speed);
+            case TrainManager.Mode.INTRO:
+                TrainMove(introSpeed);
+                break;
+            case TrainManager.Mode.MOVE:
+                TrainMove(speed);
+                break;
+            case TrainManager.Mode.STOP:
+                TrainMove(0f);
+                break;
         }
-        else if(transform.position.x > train2ndStopPos)
-        {
-            TrainMove(trainDownSpeed);
-        }
-        else
-        {
-            return;
-        }
+        //if (!GameManager.Instance.trainStop)     //trainStopフラグがfalseの間は列車が動く
+        //{
+        //    TrainMove(speed);
+        //}
+        //else if(transform.position.x > train2ndStopPos)
+        //{
+        //    TrainMove(DownSpeed);
+        //}
+        //else
+        //{
+        //    return;
+        //}
     }
     /// <summary>
     /// 列車動く
