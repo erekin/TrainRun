@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class TitleManager : MonoBehaviour
 {
     public int titleInFr, titleOutFr;
-    public float titleCounter ,trainStartPos,trainEndPos ; //trainRepeatPos
-    public GameObject title ,startButton, trainPrefab;
+    public float titleCounter;                  //trainRepeatPos,trainStartPos,trainEndPos 
+    public GameObject title ,startButton ;       //trainPrefab
     public TextMeshProUGUI counter;
 
     GameObject trains;
@@ -16,7 +16,7 @@ public class TitleManager : MonoBehaviour
     void Start()
     {
         //1個目の列車作成
-        TrainSpawn();
+        //TrainSpawn();
     }    
     void Update()
     {　
@@ -31,10 +31,10 @@ public class TitleManager : MonoBehaviour
         }
 
         //列車のループ
-        if(trains.transform.position.x > trainEndPos)
+        /*if(trains.transform.position.x > trainEndPos)
         {
             trains.transform.position = new Vector3(trainStartPos, trains.transform.position.y, trains.transform.position.z);
-        }
+        }*/
 
     }
     /// <summary>
@@ -49,10 +49,10 @@ public class TitleManager : MonoBehaviour
     /// <summary>
     /// 列車を生み出す
     /// </summary>
-    public void TrainSpawn()
+    /*public void TrainSpawn()
     {
         trains = Instantiate(trainPrefab, new Vector3(trainStartPos, 1f, 0f), Quaternion.identity);
-    }
+    }*/
     /// <summary>
     /// Startボタン押下処理
     /// </summary>
