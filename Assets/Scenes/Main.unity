@@ -2314,6 +2314,9 @@ MonoBehaviour:
   - {fileID: 4640268818347152457, guid: 7c17b24b254dd57419ec9c3d7bbdbc41, type: 3}
   - {fileID: 4640268818347152457, guid: 7c17b24b254dd57419ec9c3d7bbdbc41, type: 3}
   - {fileID: 4640268818347152457, guid: 7c17b24b254dd57419ec9c3d7bbdbc41, type: 3}
+  - {fileID: 4640268818347152457, guid: 7c17b24b254dd57419ec9c3d7bbdbc41, type: 3}
+  - {fileID: 4640268818347152457, guid: 7c17b24b254dd57419ec9c3d7bbdbc41, type: 3}
+  - {fileID: 4640268818347152457, guid: 7c17b24b254dd57419ec9c3d7bbdbc41, type: 3}
   - {fileID: 2977030756427286306, guid: 2bd31ab73f81e3a45a65d0ff1a4e0d58, type: 3}
   trainSpawnTrans: {fileID: 1341594254}
   trainStopTrans: {fileID: 1612473938}
@@ -2444,7 +2447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!136 &1496846050
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2718,7 +2721,7 @@ GameObject:
   - component: {fileID: 1612473935}
   m_Layer: 0
   m_Name: TrainStop
-  m_TagString: Untagged
+  m_TagString: TrainStop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2794,7 +2797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612473934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2899,6 +2902,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1835966916}
   - component: {fileID: 1835966917}
+  - component: {fileID: 1835966919}
+  - component: {fileID: 1835966918}
   m_Layer: 0
   m_Name: TrainParent
   m_TagString: Untagged
@@ -2936,6 +2941,35 @@ MonoBehaviour:
   speed: 20
   introSpeed: -5
   DownSpeed: 0
+--- !u!65 &1835966918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835966915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1835966919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835966915}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 96
+  m_CollisionDetection: 0
 --- !u!1 &1905945480
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - Exit
   - TreeSet
   - MainManager
+  - TrainStop
   layers:
   - Default
   - TransparentFX

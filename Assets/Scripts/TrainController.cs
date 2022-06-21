@@ -53,4 +53,11 @@ public class TrainController : MonoBehaviour
     {
         transform.position += new Vector3(x * Time.deltaTime, 0f, 0f);
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("TrainStop"))
+        {
+            trainManager.trainMode = TrainManager.Mode.STOP;
+        }
+    }
 }

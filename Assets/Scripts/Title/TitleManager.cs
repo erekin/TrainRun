@@ -7,16 +7,12 @@ using UnityEngine.SceneManagement;
 public class TitleManager : MonoBehaviour
 {
     public int titleInFr, titleOutFr;
-    public float titleCounter;                  //trainRepeatPos,trainStartPos,trainEndPos 
-    public GameObject title ,startButton ;       //trainPrefab
+    public float titleCounter;                  
+    public GameObject title ,startButton ;      
     public TextMeshProUGUI counter;
-
-    GameObject trains;
-        
     void Start()
     {
-        //1個目の列車作成
-        //TrainSpawn();
+       
     }    
     void Update()
     {　
@@ -29,13 +25,6 @@ public class TitleManager : MonoBehaviour
         {
             TitleInsert(title);
         }
-
-        //列車のループ
-        /*if(trains.transform.position.x > trainEndPos)
-        {
-            trains.transform.position = new Vector3(trainStartPos, trains.transform.position.y, trains.transform.position.z);
-        }*/
-
     }
     /// <summary>
     /// 非表示状態のタイトルを表示状態にする
@@ -46,13 +35,6 @@ public class TitleManager : MonoBehaviour
         title.SetActive(true);
         startButton.SetActive(true);
     }
-    /// <summary>
-    /// 列車を生み出す
-    /// </summary>
-    /*public void TrainSpawn()
-    {
-        trains = Instantiate(trainPrefab, new Vector3(trainStartPos, 1f, 0f), Quaternion.identity);
-    }*/
     /// <summary>
     /// Startボタン押下処理
     /// </summary>
