@@ -26,9 +26,8 @@ public class TrainManager : MonoBehaviour
     }    
     void Update()
     {
-        //列車関連
-        //TrainStop();
-        //Invoke("PlayerSpawn", playerSpawnTime);
+        //Debug.Log("TRAIN" + trainParent.transform.position.x);
+        //Debug.Log("STOP" + trainStopTrans.transform.position.x);
     }
     /// <summary>
     /// 列車を生み出す
@@ -45,30 +44,16 @@ public class TrainManager : MonoBehaviour
     }
     public void TrainIntro()
     {
-        if(trains.transform.position.x > trainStopTrans.transform.position.x) 
+        if(trainParent.transform.position.x > trainStopTrans.transform.position.x) 
         {
             trainMode = Mode.INTRO;
         }
         else
         {
+            Debug.Log("GO");
             trainMode = Mode.STOP;
-        }
-        
+        }        
     }
-    /// <summary>
-    /// 列車停止フラグ
-    /// </summary>
-    //public void TrainStop()
-    //{
-    //    if(trains.transform.position.x > train1stStopPos)
-    //    {
-    //        GameManager.Instance.trainStop = true;
-    //    }
-    //    else
-    //    {
-    //        return;
-    //    }
-    //}
     public void PlayerSpawn()
     {
         player.SetActive(true);

@@ -32,18 +32,6 @@ public class TrainController : MonoBehaviour
                 TrainMove(0f);
                 break;
         }
-        //if (!GameManager.Instance.trainStop)     //trainStopƒtƒ‰ƒO‚ªfalse‚ÌŠÔ‚Í—ñŽÔ‚ª“®‚­
-        //{
-        //    TrainMove(speed);
-        //}
-        //else if(transform.position.x > train2ndStopPos)
-        //{
-        //    TrainMove(DownSpeed);
-        //}
-        //else
-        //{
-        //    return;
-        //}
     }
     /// <summary>
     /// —ñŽÔ“®‚­
@@ -53,11 +41,11 @@ public class TrainController : MonoBehaviour
     {
         transform.position += new Vector3(x * Time.deltaTime, 0f, 0f);
     }
-    public void OnTriggerEnter(Collider other)
+    /*public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("TrainStop"))
         {
             trainManager.trainMode = TrainManager.Mode.STOP;
         }
-    }
+    }*/
 }
