@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260574c9225a980428ae2f36a61762f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trainStartPos: 0
+  trainStartPos: -13
   playerSpawnTime: 5
   trainParent: {fileID: 1835966915}
   trainTop: {fileID: 2977030756427286306, guid: 2bd31ab73f81e3a45a65d0ff1a4e0d58, type: 3}
@@ -2520,7 +2520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496846049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 50, z: 0}
+  m_LocalPosition: {x: -6, y: 5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []

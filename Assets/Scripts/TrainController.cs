@@ -23,7 +23,7 @@ public class TrainController : MonoBehaviour
         switch (trainManager.trainMode)
         {
             case TrainManager.Mode.INTRO:
-                TrainMove(introSpeed);
+                TrainMove(0f);
                 break;
             case TrainManager.Mode.MOVE:
                 TrainMove(speed);

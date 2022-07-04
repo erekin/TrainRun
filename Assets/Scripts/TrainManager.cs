@@ -22,12 +22,11 @@ public class TrainManager : MonoBehaviour
     {
         //óÒé‘çÏê¨
         TrainSpawn();
-        TrainIntro();
+        //TrainIntro();
     }    
     void Update()
     {
-        //Debug.Log("TRAIN" + trainParent.transform.position.x);
-        //Debug.Log("STOP" + trainStopTrans.transform.position.x);
+
     }
     /// <summary>
     /// óÒé‘Çê∂Ç›èoÇ∑
@@ -42,7 +41,7 @@ public class TrainManager : MonoBehaviour
         }
         trainParent.transform.position = trainSpawnTrans.position;
     }
-    public void TrainIntro()
+    /*public void TrainIntro()
     {
         if(trainParent.transform.position.x > trainStopTrans.transform.position.x) 
         {
@@ -53,7 +52,7 @@ public class TrainManager : MonoBehaviour
             Debug.Log("GO");
             trainMode = Mode.STOP;
         }        
-    }
+    }*/
     public void PlayerSpawn()
     {
         player.SetActive(true);
