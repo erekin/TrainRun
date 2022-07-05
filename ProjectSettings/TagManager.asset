@@ -12,6 +12,7 @@ TagManager:
   - TrainStop
   - TrainManager
   - Train
+  - Miss
   layers:
   - Default
   - TransparentFX

@@ -34,5 +34,9 @@ public class PlayerController : MonoBehaviour
                 jumpNow = false;
             }
         }
+        else if (collision.gameObject.CompareTag("Miss"))
+        {
+            Debug.Log("Miss");
+        }
     }
 }
