@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject TrainManagerObj;
+    public GameObject TrainManagerObj,toTitleButton;
     public float jumpPower;
     TrainManager trainManager;
     Rigidbody rd;
@@ -46,7 +47,13 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerStop"))
         {
             trainManager.trainMode = TrainManager.Mode.STOP;
+            jumpNow = true;
+            Invoke("ToTitle", 1.0f);
         }
+    }
+    void ToTitle()
+    {
+        toTitleButton.SetActive(true);
     }
     public void PlayerMiss()
     {
@@ -54,12 +61,13 @@ public class PlayerController : MonoBehaviour
         this.transform.DOMoveY(5f, 0.3f);
         this.transform.DOMoveZ(-3f, 0.3f).OnComplete(() =>
         {
-            this.transform.DOMoveX(-10f, 0.5f);
-            Invoke("PlayerDestroy", 1f);
+            this.transform.DOMoveX(-12f, 0.8f);
+            Invoke("PlayerDestroy", 1.5f);
         });
     }
     void PlayerDestroy()
     {
+        SceneManager.LoadScene("Title");
         Destroy(gameObject);
     }
 }

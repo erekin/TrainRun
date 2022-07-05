@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TrainManager : MonoBehaviour
 {
@@ -45,6 +46,10 @@ public class TrainManager : MonoBehaviour
     {
         trainMode = Mode.MOVE;
         StartButton.SetActive(false);
+    }
+    public void OnToTitleButton()
+    {
+        SceneManager.LoadScene("Title");
     }
     public void PlayerSpawn()
     {
