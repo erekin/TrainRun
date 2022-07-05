@@ -8,7 +8,7 @@ public class TrainManager : MonoBehaviour
     public float trainStartPos, playerSpawnTime;  
     public GameObject trainParent,trainTop,player,StartButton;
     public GameObject[] trainsArray;
-    public Transform trainSpawnTrans;   //, trainStopTrans
+    public Transform trainSpawnTrans;   
     public enum Mode
     {
         INTRO,
@@ -23,7 +23,6 @@ public class TrainManager : MonoBehaviour
         //—ñŽÔì¬
         TrainSpawn();
         trainMode = Mode.INTRO;
-        //TrainIntro();
     }    
     void Update()
     {
@@ -47,18 +46,6 @@ public class TrainManager : MonoBehaviour
         trainMode = Mode.MOVE;
         StartButton.SetActive(false);
     }
-    /*public void TrainIntro()
-    {
-        if(trainParent.transform.position.x > trainStopTrans.transform.position.x) 
-        {
-            trainMode = Mode.INTRO;
-        }
-        else
-        {
-            Debug.Log("GO");
-            trainMode = Mode.STOP;
-        }        
-    }*/
     public void PlayerSpawn()
     {
         player.SetActive(true);

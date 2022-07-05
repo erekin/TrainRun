@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrainController : MonoBehaviour
 {
-    public float speed, introSpeed,DownSpeed;  //,train2ndStopPos
+    public float speed, DownSpeed;  
     TrainManager trainManager;
     void Start()
     {
@@ -39,6 +39,6 @@ public class TrainController : MonoBehaviour
     /// <param name="x"></param>
     public void TrainMove(float x)
     {
-        transform.position += new Vector3(x * Time.deltaTime, 0f, 0f);
+        transform.position += new Vector3(-x * Time.deltaTime, 0f, 0f);
     }
 }

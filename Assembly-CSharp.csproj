@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\bak\RailSet.cs" />
     <Compile Include="Assets\Scripts\TrainController.cs" />
     <Compile Include="Assets\Scripts\bak\GroundSet.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\GraundObjController.cs" />
     <Compile Include="Assets\Scripts\SingletonMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\BGObjGenerator.cs" />
@@ -68,7 +69,6 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\TrainManager.cs" />
     <Compile Include="Assets\Scripts\TreesController.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

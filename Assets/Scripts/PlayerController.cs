@@ -20,27 +20,17 @@ public class PlayerController : MonoBehaviour
         if(trainManager.trainMode == TrainManager.Mode.INTRO) return;
         if (Input.GetMouseButtonDown(0) && jumpNow == false ) 
         {
-            Debug.Log("Jump!");
             jumpNow = true;
             //transform.position += transform.up * jumpPower;
             this.rd.AddForce(transform.up * jumpPower);         
         } ;   
     }
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Train"))
-        {
-            Debug.Log("Tuch");
-            jumpNow = false;
-        }
-    }*/
-    private void OnCollisionEnter(Collision collision)
+     private void OnCollisionEnter(Collision collision)
     {
         if (jumpNow)
         {
             if (collision.gameObject.CompareTag("Train"))
             {
-                Debug.Log("Touch");
                 jumpNow = false;
             }
         }
