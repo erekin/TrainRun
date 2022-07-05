@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,7 +37,29 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Miss"))
         {
-            Debug.Log("Miss");
+            PlayerMiss();
+            trainManager.trainMode =TrainManager.Mode.STOP;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerStop"))
+        {
+            trainManager.trainMode = TrainManager.Mode.STOP;
+        }
+    }
+    public void PlayerMiss()
+    {
+        jumpNow = true;
+        this.transform.DOMoveY(5f, 0.3f);
+        this.transform.DOMoveZ(-3f, 0.3f).OnComplete(() =>
+        {
+            this.transform.DOMoveX(-10f, 0.5f);
+            Invoke("PlayerDestroy", 1f);
+        });
+    }
+    void PlayerDestroy()
+    {
+        Destroy(gameObject);
     }
 }

@@ -13,6 +13,7 @@ TagManager:
   - TrainManager
   - Train
   - Miss
+  - PlayerStop
   layers:
   - Default
   - TransparentFX
