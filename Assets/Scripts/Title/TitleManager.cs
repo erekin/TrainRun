@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    public int titleInFr, titleOutFr;
+    public int titleInSec, titleOutFr;
     public float titleCounter;                  
     public GameObject title ,startButton ;      
     public TextMeshProUGUI counter;
@@ -21,7 +21,7 @@ public class TitleManager : MonoBehaviour
         counter.text = titleCounter.ToString();
 
         //タイトル表示関連
-        if (titleCounter > titleInFr)
+        if (titleCounter > titleInSec)
         {
             TitleInsert(title);
         }

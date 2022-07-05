@@ -10,6 +10,8 @@ TagManager:
   - TreeSet
   - MainManager
   - TrainStop
+  - TrainManager
+  - Train
   layers:
   - Default
   - TransparentFX

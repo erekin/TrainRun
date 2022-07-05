@@ -8,13 +8,13 @@ public class TrainController : MonoBehaviour
     TrainManager trainManager;
     void Start()
     {
-        if (!GameObject.FindGameObjectWithTag("MainManager"))
+        if (!GameObject.FindGameObjectWithTag("TrainManager"))
         {
             return;
         }
         else
         {
-            trainManager = GameObject.FindGameObjectWithTag("MainManager").GetComponent<TrainManager>();
+            trainManager = GameObject.FindGameObjectWithTag("TrainManager").GetComponent<TrainManager>();
         }        
     }
     void Update()
@@ -41,11 +41,4 @@ public class TrainController : MonoBehaviour
     {
         transform.position += new Vector3(x * Time.deltaTime, 0f, 0f);
     }
-    /*public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("TrainStop"))
-        {
-            trainManager.trainMode = TrainManager.Mode.STOP;
-        }
-    }*/
 }

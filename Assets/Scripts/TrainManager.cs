@@ -5,10 +5,10 @@ using TMPro;
 
 public class TrainManager : MonoBehaviour
 {
-    public float trainStartPos, playerSpawnTime;    //train1stStopPos
-    public GameObject trainParent,trainTop,player;
+    public float trainStartPos, playerSpawnTime;  
+    public GameObject trainParent,trainTop,player,StartButton;
     public GameObject[] trainsArray;
-    public Transform trainSpawnTrans, trainStopTrans;
+    public Transform trainSpawnTrans;   //, trainStopTrans
     public enum Mode
     {
         INTRO,
@@ -22,6 +22,7 @@ public class TrainManager : MonoBehaviour
     {
         //óÒé‘çÏê¨
         TrainSpawn();
+        trainMode = Mode.INTRO;
         //TrainIntro();
     }    
     void Update()
@@ -40,6 +41,11 @@ public class TrainManager : MonoBehaviour
             trains.transform.parent = trainParent.transform;
         }
         trainParent.transform.position = trainSpawnTrans.position;
+    }
+    public void OnStartButton()
+    {
+        trainMode = Mode.MOVE;
+        StartButton.SetActive(false);
     }
     /*public void TrainIntro()
     {
