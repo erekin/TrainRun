@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TrainManager : MonoBehaviour
 {
-    public float trainStartPos, playerSpawnTime;  
+    public float trainStartPos;  
     public GameObject trainParent,trainTop,player,StartButton;
     public GameObject[] trainsArray;
     public Transform trainSpawnTrans;   
