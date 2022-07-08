@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class TrainManager : MonoBehaviour
 {
     public float trainStartPos;  
-    public GameObject trainParent,trainTop,player,StartButton;
+    public GameObject trainParent,trainTop;
     public GameObject[] trainsArray;
     public Transform trainSpawnTrans;   
     public enum Mode
@@ -42,17 +41,5 @@ public class TrainManager : MonoBehaviour
         }
         trainParent.transform.position = trainSpawnTrans.position;
     }
-    public void OnStartButton()
-    {
-        trainMode = Mode.MOVE;
-        StartButton.SetActive(false);
-    }
-    public void OnToTitleButton()
-    {
-        SceneManager.LoadScene("Title");
-    }
-    public void PlayerSpawn()
-    {
-        player.SetActive(true);
-    }
+
 }

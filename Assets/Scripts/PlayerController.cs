@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
             trainManager.trainMode =TrainManager.Mode.STOP;
         }
     }
+    public int dotCount;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerStop"))
@@ -49,6 +50,10 @@ public class PlayerController : MonoBehaviour
             trainManager.trainMode = TrainManager.Mode.STOP;
             jumpNow = true;
             Invoke("ToTitle", 1.0f);
+        }
+        if (other.gameObject.CompareTag("dot"))
+        {
+            dotCount++;
         }
     }
     void ToTitle()
@@ -67,7 +72,7 @@ public class PlayerController : MonoBehaviour
     }
     void PlayerDestroy()
     {
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("Main");
         Destroy(gameObject);
     }
 }
