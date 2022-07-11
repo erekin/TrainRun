@@ -27,7 +27,7 @@ public class MainManager : MonoBehaviour
         trainManager.trainMode = TrainManager.Mode.MOVE;
         StartButton.SetActive(false);
     }
-    public void OnToTitleButton()
+    public void OnRetryButton()
     {
         SceneManager.LoadScene("Main");
     }
