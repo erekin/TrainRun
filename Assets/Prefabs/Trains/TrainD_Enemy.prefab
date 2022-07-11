@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6963095026120308264}
   - component: {fileID: 1777915407549339272}
   m_Layer: 0
-  m_Name: TrainF
+  m_Name: TrainD_Enemy
   m_TagString: Train
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,9 +34,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1039900145109789746}
+  - {fileID: 2746687153981698133}
   - {fileID: 3124996195149407098}
-  - {fileID: 4137069470041451040}
-  - {fileID: 6229081521642329993}
+  - {fileID: 6468477296992208233}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18988,11 +18988,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2961749002464078660, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2961749002464078660, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2961749002464078660, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19066,7 +19066,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &1185552557717717348
+--- !u!1001 &1082005682251111185
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -19075,11 +19075,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2961749002464078660, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2961749002464078660, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2961749002464078660, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19123,27 +19123,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8683190778195632633, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
       propertyPath: m_Name
-      value: dot (2)
+      value: dot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
---- !u!4 &4137069470041451040 stripped
+--- !u!4 &2746687153981698133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2961749002464078660, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
-  m_PrefabInstance: {fileID: 1185552557717717348}
+  m_PrefabInstance: {fileID: 1082005682251111185}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7562398939960205469 stripped
+--- !u!1 &8612266148639308520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8683190778195632633, guid: 3155b1ea97d940845a0cebdfd23a1a8a, type: 3}
-  m_PrefabInstance: {fileID: 1185552557717717348}
+  m_PrefabInstance: {fileID: 1082005682251111185}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &7465601695527593333
+--- !u!54 &5364228710616129616
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7562398939960205469}
+  m_GameObject: {fileID: 8612266148639308520}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -19153,7 +19153,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &3840309043963121458
+--- !u!1001 &4250559988511202770
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -19166,7 +19166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7149921936407304379, guid: a2c5643b9a8307c4b80c344484b3cb4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7149921936407304379, guid: a2c5643b9a8307c4b80c344484b3cb4a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19210,8 +19210,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c5643b9a8307c4b80c344484b3cb4a, type: 3}
---- !u!4 &6229081521642329993 stripped
+--- !u!4 &6468477296992208233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7149921936407304379, guid: a2c5643b9a8307c4b80c344484b3cb4a, type: 3}
-  m_PrefabInstance: {fileID: 3840309043963121458}
+  m_PrefabInstance: {fileID: 4250559988511202770}
   m_PrefabAsset: {fileID: 0}
