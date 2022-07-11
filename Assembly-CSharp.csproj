@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\TrainManager.cs" />
     <Compile Include="Assets\Scripts\TreesController.cs" />
     <Compile Include="Assets\Scripts\DotController.cs" />
+    <Compile Include="Assets\Scripts\TrainPrefab.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

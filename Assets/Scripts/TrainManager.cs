@@ -8,7 +8,8 @@ public class TrainManager : MonoBehaviour
     public float trainStartPos;  
     public GameObject trainParent,trainTop;
     public GameObject[] trainsArray;
-    public Transform trainSpawnTrans;   
+    public Transform trainSpawnTrans;
+    TrainPrefab trainPrefab;
     public enum Mode
     {
         INTRO,
@@ -28,6 +29,7 @@ public class TrainManager : MonoBehaviour
     {
 
     }
+    public int allDots = 0;
     /// <summary>
     /// —ñÔ‚ğ¶‚İo‚·
     /// </summary>
@@ -36,10 +38,15 @@ public class TrainManager : MonoBehaviour
         foreach(GameObject train in trainsArray)
         {
             trains = Instantiate(train, new Vector3(trainStartPos, 1f, 0f), Quaternion.identity);
+
+            trainPrefab = train.GetComponent<TrainPrefab>();
+            allDots += trainPrefab.dots;      
+
             trainStartPos += 8.5f;
             trains.transform.parent = trainParent.transform;
         }
         trainParent.transform.position = trainSpawnTrans.position;
+        Debug.Log(allDots);
     }
 
 }

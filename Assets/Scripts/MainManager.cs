@@ -9,7 +9,7 @@ public class MainManager : MonoBehaviour
     public GameObject trainManagerObj;
     TrainManager trainManager;
     PlayerController playerCon;
-    public GameObject player,StartButton;
+    public GameObject player,startButton;
     public TextMeshProUGUI dotCounter;
 
     void Start()
@@ -25,7 +25,7 @@ public class MainManager : MonoBehaviour
     public void OnStartButton()
     {
         trainManager.trainMode = TrainManager.Mode.MOVE;
-        StartButton.SetActive(false);
+        startButton.SetActive(false);
     }
     public void OnRetryButton()
     {

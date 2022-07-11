@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject TrainManagerObj,toTitleButton;
+    public GameObject TrainManagerObj,toTitleButton, perfectButton;
     public float jumpPower;
     TrainManager trainManager;
     Rigidbody rd;
@@ -45,15 +45,21 @@ public class PlayerController : MonoBehaviour
     public int dotCount;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PlayerStop"))
+        if (other.gameObject.CompareTag("dot"))
+        {
+            dotCount++;
+        }
+        if (trainManager.allDots != dotCount && other.gameObject.CompareTag("PlayerStop"))
         {
             trainManager.trainMode = TrainManager.Mode.STOP;
             jumpNow = true;
             Invoke("ToTitle", 1.0f);
         }
-        if (other.gameObject.CompareTag("dot"))
+        else if(trainManager.allDots == dotCount && other.gameObject.CompareTag("PlayerStop"))
         {
-            dotCount++;
+            trainManager.trainMode = TrainManager.Mode.STOP;
+            jumpNow = true;
+            perfectButton.SetActive(true);
         }
     }
     void ToTitle()
