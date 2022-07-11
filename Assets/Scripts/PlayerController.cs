@@ -16,16 +16,14 @@ public class PlayerController : MonoBehaviour
         trainManager = TrainManagerObj.GetComponent<TrainManager>();
         rd = GetComponent<Rigidbody>();
     }
-
-    void Update()
+     void Update()
     {
         if(trainManager.trainMode == TrainManager.Mode.INTRO) return;
         if (Input.GetMouseButtonDown(0) && jumpNow == false ) 
         {
             jumpNow = true;
-            //transform.position += transform.up * jumpPower;
-            this.rd.AddForce(transform.up * jumpPower);         
-        } ;   
+            this.rd.AddForce(transform.up * jumpPower);
+        }
     }
      private void OnCollisionEnter(Collision collision)
     {
@@ -36,11 +34,12 @@ public class PlayerController : MonoBehaviour
                 jumpNow = false;
             }
         }
-        else if (collision.gameObject.CompareTag("Miss"))
+        if (collision.gameObject.CompareTag("Miss"))
         {
             PlayerMiss();
-            trainManager.trainMode =TrainManager.Mode.STOP;
+            trainManager.trainMode = TrainManager.Mode.STOP;
         }
+
     }
     public int dotCount;
     private void OnTriggerEnter(Collider other)
