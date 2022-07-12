@@ -5,10 +5,10 @@ using UnityEngine;
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     public float counter;
-    public bool trainStop;
+    //public bool trainStop;
     void Start()
     {
-        trainStop = false;
+        //trainStop = false;
     }    
     void Update()
     {
