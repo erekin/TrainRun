@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     TrainManager trainManager;
     Rigidbody rd;
     public bool jumpNow;
+    [SerializeField]
+    private SoundManager soundManager;
     void Start()
     {
         trainManager = TrainManagerObj.GetComponent<TrainManager>();
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             jumpNow = true;
             this.rd.AddForce(transform.up * jumpPower);
+            soundManager.Play("jump");
         }
     }
      private void OnCollisionEnter(Collision collision)
@@ -47,6 +50,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("dot"))
         {
             dotCount++;
+            soundManager.Play("dotゲット");
         }
         if (trainManager.allDots != dotCount && other.gameObject.CompareTag("PlayerStop"))
         {
@@ -59,6 +63,7 @@ public class PlayerController : MonoBehaviour
             trainManager.trainMode = TrainManager.Mode.STOP;
             jumpNow = true;
             perfectButton.SetActive(true);
+            soundManager.Play("パーフェクト");
         }
     }
     void ToTitle()
@@ -68,10 +73,12 @@ public class PlayerController : MonoBehaviour
     public void PlayerMiss()
     {
         jumpNow = true;
+        soundManager.Play("Miss");
         this.transform.DOMoveY(5f, 0.3f);
         this.transform.DOMoveZ(-3f, 0.3f).OnComplete(() =>
         {
             this.transform.DOMoveX(-12f, 0.8f);
+            soundManager.Play("落下");
             Invoke("PlayerDestroy", 1.5f);
         });
     }
