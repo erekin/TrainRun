@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8307504166027676227}
   - component: {fileID: 8307504166027676226}
   - component: {fileID: 8307504166027676229}
-  - component: {fileID: 8307504166027676228}
   - component: {fileID: 8789799701030741184}
   m_Layer: 0
   m_Name: railBase
@@ -18684,20 +18683,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8307504166027676230}
-  m_Mesh: {fileID: 0}
---- !u!64 &8307504166027676228
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8307504166027676230}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!114 &8789799701030741184
 MonoBehaviour:
