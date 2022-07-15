@@ -10,18 +10,19 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;
     TrainManager trainManager;
     Rigidbody rd;
-    public bool jumpNow;
+    public bool jumpNow,jumpStop;
     [SerializeField]
     private SoundManager soundManager;
     void Start()
     {
         trainManager = TrainManagerObj.GetComponent<TrainManager>();
         rd = GetComponent<Rigidbody>();
+        jumpNow = true;
     }
      void Update()
     {
         if(trainManager.trainMode == TrainManager.Mode.INTRO) return;
-        if (Input.GetMouseButtonDown(0) && jumpNow == false ) 
+        if (Input.GetMouseButtonDown(0) && jumpNow == false && jumpStop == false ) 
         {
             jumpNow = true;
             this.rd.AddForce(transform.up * jumpPower);
@@ -56,12 +57,14 @@ public class PlayerController : MonoBehaviour
         {
             trainManager.trainMode = TrainManager.Mode.STOP;
             jumpNow = true;
+            jumpStop = true;
             Invoke("ToTitle", 1.0f);
         }
         else if(trainManager.allDots == dotCount && other.gameObject.CompareTag("PlayerStop"))
         {
             trainManager.trainMode = TrainManager.Mode.STOP;
             jumpNow = true;
+            jumpStop = true;
             perfectButton.SetActive(true);
             soundManager.Play("パーフェクト");
         }

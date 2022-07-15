@@ -6,21 +6,26 @@ using TMPro;
 
 public class MainManager : MonoBehaviour
 {
-    public GameObject trainManagerObj;
-    TrainManager trainManager;
+    //public GameObject trainManagerObj;
+    //TrainManager trainManager;
+
+    [SerializeField]
+    private TrainManager trainManager;
+
     PlayerController playerCon;
     public GameObject player,startButton;
-    public TextMeshProUGUI dotCounter;
+    public TextMeshProUGUI dotCounter,dotCounter2;
 
     void Start()
     {
-        trainManager = trainManagerObj.GetComponent<TrainManager>();
+        //trainManager = trainManagerObj.GetComponent<TrainManager>();
         playerCon = player.GetComponent<PlayerController>();
+        dotCounter2.text = trainManager.allDots.ToString("D2");
     }
 
     void Update()
     {
-        dotCounter.text = playerCon.dotCount.ToString("D3");
+        dotCounter.text = playerCon.dotCount.ToString("D2");
     }
     public void OnStartButton()
     {

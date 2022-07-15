@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4640268818347152498}
   - component: {fileID: 4640268818347152501}
   - component: {fileID: 4640268818347152500}
-  - component: {fileID: 4640268818347152503}
   - component: {fileID: 4064504486628685015}
   - component: {fileID: 3562097149585707257}
+  - component: {fileID: 5564748985311157689}
   m_Layer: 0
   m_Name: TrainB
   m_TagString: Train
@@ -18885,20 +18885,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4640268818347152457}
   m_Mesh: {fileID: 0}
---- !u!64 &4640268818347152503
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4640268818347152457}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &4064504486628685015
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18928,6 +18914,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dots: 0
+--- !u!65 &5564748985311157689
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4640268818347152457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.5220776, y: 2.9, z: 4}
+  m_Center: {x: -0.008068085, y: 1.3, z: 0}
 --- !u!1 &6218679326542345339
 GameObject:
   m_ObjectHideFlags: 0
