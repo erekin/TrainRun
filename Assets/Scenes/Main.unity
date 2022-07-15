@@ -1161,7 +1161,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1236
+  m_Name: pb_Mesh44240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4115,7 +4115,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1262
+  m_Name: pb_Mesh44508
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4310,7 +4310,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1282
+  m_Name: pb_Mesh44470
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4638,7 +4638,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1310
+  m_Name: pb_Mesh44526
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4888,6 +4888,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 609955948082913537, guid: 9d22b23910566224e8ec321ca7698ed7, type: 3}
+      propertyPath: m_TagString
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 609955948082913542, guid: 9d22b23910566224e8ec321ca7698ed7, type: 3}
+      propertyPath: soundDatas.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 609955948082913542, guid: 9d22b23910566224e8ec321ca7698ed7, type: 3}
+      propertyPath: soundDatas.Array.data[5].name
+      value: shot
+      objectReference: {fileID: 0}
+    - target: {fileID: 609955948082913542, guid: 9d22b23910566224e8ec321ca7698ed7, type: 3}
+      propertyPath: soundDatas.Array.data[5].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 440f9cf6bf3c05944a241e5510f2ac3e, type: 3}
     - target: {fileID: 609955948082913543, guid: 9d22b23910566224e8ec321ca7698ed7, type: 3}
       propertyPath: m_RootOrder
       value: 4

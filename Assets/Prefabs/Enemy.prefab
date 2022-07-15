@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4782721006595570394}
   - component: {fileID: 1570885027783078997}
   - component: {fileID: 6171582894658393849}
+  - component: {fileID: 1776199701785571762}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Miss
@@ -114,3 +115,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1776199701785571762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029245581632199232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6f63169fe6bba45ac04eac97b4a6a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6198246522154585129, guid: 10f533424c696b64587be0ee1b2d0a50, type: 3}
+  shotBulletTime: 0.2

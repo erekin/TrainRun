@@ -8,7 +8,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     //public bool trainStop;
     void Start()
     {
-        //trainStop = false;
+        Application.targetFrameRate = 60;
     }    
     void Update()
     {

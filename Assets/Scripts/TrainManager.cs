@@ -46,7 +46,6 @@ public class TrainManager : MonoBehaviour
             trains.transform.parent = trainParent.transform;
         }
         trainParent.transform.position = trainSpawnTrans.position;
-        Debug.Log(allDots);
     }
 
 }
