@@ -29,4 +29,11 @@ public class EnemyController : MonoBehaviour
         Instantiate(bullet, this.transform.position, Quaternion.Euler(0f, 0f, 90f));
         soundManager.Play("shot");
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
