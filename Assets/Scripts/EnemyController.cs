@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class EnemyController : MonoBehaviour
 {
@@ -33,7 +34,8 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
+            this.transform.DOMove(new Vector3(0.05f,6f,0f), 0.2f).SetEase(Ease.OutSine).OnComplete(() =>
+            Destroy(this.gameObject));
         }
     }
 }

@@ -38,8 +38,9 @@ public class PlayerController : MonoBehaviour
                 jumpNow = false;
             }
         }
-        if (collision.gameObject.CompareTag("Miss") || collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Miss"))   //|| collision.gameObject.CompareTag("Bullet")
         {
+            Debug.Log("Miss");
             PlayerMiss();
             trainManager.trainMode = TrainManager.Mode.STOP;
         }
