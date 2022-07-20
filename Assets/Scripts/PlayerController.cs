@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Miss"))   //|| collision.gameObject.CompareTag("Bullet")
         {
-            Debug.Log("Miss");
+            //Debug.Log("Miss");
             PlayerMiss();
             trainManager.trainMode = TrainManager.Mode.STOP;
         }
