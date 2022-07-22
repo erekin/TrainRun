@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\GraundObjController.cs" />
     <Compile Include="Assets\Scripts\SingletonMonoBehaviour.cs" />
-    <Compile Include="Assets\BulletController.cs" />
+    <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\TrainPrefab.cs" />
     <Compile Include="Assets\Scripts\BGObjGenerator.cs" />
     <Compile Include="Assets\Scripts\MountController.cs" />
@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\TrainManager.cs" />
     <Compile Include="Assets\Scripts\TreesController.cs" />
     <Compile Include="Assets\Scripts\DotController.cs" />
+    <Compile Include="Assets\Scripts\HalfResolusion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
