@@ -6,8 +6,6 @@ using TMPro;
 
 public class MainManager : MonoBehaviour
 {
-    //public GameObject trainManagerObj;
-    //TrainManager trainManager;
 
     [SerializeField]
     private TrainManager trainManager;
@@ -18,7 +16,6 @@ public class MainManager : MonoBehaviour
 
     void Start()
     {
-        //trainManager = trainManagerObj.GetComponent<TrainManager>();
         playerCon = player.GetComponent<PlayerController>();
         dotCounter2.text = trainManager.allDots.ToString("D2");
     }
@@ -36,8 +33,4 @@ public class MainManager : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
-    /*public void PlayerSpawn()
-    {
-        player.SetActive(true);
-    }*/
 }

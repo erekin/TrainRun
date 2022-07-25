@@ -19,14 +19,6 @@ public class BulletController : MonoBehaviour
     {
         DoDestroy();
     }
-    /*private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("hit");
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Invoke("DoDestroy", 0.1f);
-        }
-    }*/
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))

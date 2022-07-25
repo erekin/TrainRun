@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     public float counter;
-    //public bool trainStop;
     void Start()
     {
         Application.targetFrameRate = 60;

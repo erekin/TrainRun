@@ -7,6 +7,7 @@ using DG.Tweening;
 public class PlayerController : MonoBehaviour
 {
     public GameObject TrainManagerObj,toTitleButton, perfectButton;
+    public GameObject playersBullet;
     public float jumpPower;
     TrainManager trainManager;
     Rigidbody rd;
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
                 jumpNow = false;
             }
         }
-        if (collision.gameObject.CompareTag("Miss"))   //|| collision.gameObject.CompareTag("Bullet")
+        if (collision.gameObject.CompareTag("Miss"))  
         {
             //Debug.Log("Miss");
             PlayerMiss();
@@ -68,6 +69,11 @@ public class PlayerController : MonoBehaviour
             jumpStop = true;
             perfectButton.SetActive(true);
             soundManager.Play("パーフェクト");
+        }
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Instantiate(playersBullet, this.transform.position, Quaternion.Euler(0f, 0f, -90f));
+            soundManager.Play("shot");
         }
     }
     void ToTitle()

@@ -32,8 +32,9 @@ public class EnemyController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("Shoot!!");
             this.transform.DOMove(new Vector3(0.05f,6f,0f), 0.2f).SetEase(Ease.OutSine).OnComplete(() =>
             Destroy(this.gameObject));
         }
